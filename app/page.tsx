@@ -64,7 +64,14 @@ export default function FitnessPage() {
     <div className="bg-[#0a0a0a] text-white min-h-screen font-sans">
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0a0a0a] flex flex-col items-center justify-center gap-8 md:hidden">
+        <div className="fixed inset-0 z-[60] bg-[#0a0a0a] flex flex-col items-center justify-center gap-8 md:hidden">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-5 right-6 text-white/40 hover:text-white text-3xl leading-none"
+            aria-label="Cerrar menú"
+          >
+            ✕
+          </button>
           {navLinks.map((l) => (
             <a
               key={l.label}
@@ -117,7 +124,7 @@ export default function FitnessPage() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menú"
           >
-            {menuOpen ? '✕' : '☰'}
+            ☰
           </button>
         </div>
       </nav>
@@ -142,7 +149,7 @@ export default function FitnessPage() {
             12 semanas. 1 transformación.
           </div>
 
-          <h1 className="text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-tighter uppercase mb-8">
+          <h1 className="text-[clamp(2rem,12vw,10rem)] font-black leading-[0.85] tracking-tighter uppercase mb-8">
             SIN<br />
             <span style={{ WebkitTextStroke: '2px #FF4500', color: 'transparent' }}>EXCUSAS.</span>
             <br />
